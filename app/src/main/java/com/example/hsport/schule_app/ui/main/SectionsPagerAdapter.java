@@ -6,6 +6,7 @@ import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.DisplayMetrics;
 
 import com.example.hsport.schule_app.R;
 
@@ -48,7 +49,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
-        return 9;
+        // Check the screen size before showing anything
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+//        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics); //not needed?
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+
+
+
+        System.out.println("The width is " + width);
+
+        // Show 3 total pages.
+
+
+        return 3;
     }
 }
