@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
 import com.example.hsport.schule_app.ui.main.SectionsPagerAdapter;
 
@@ -16,6 +17,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        // Own code
+        ListView listView;
+        String mTitle[] = {"Addieren", "Subtrahieren", "Multiplizieren", "Dividieren", "Bruchrechnen"};
+        String mDescription[] = ("Addieren Beschreibung", "Subtrahieren Beschreibung", "Multiplizieren Beschreibung",
+                            "Dividieren Beschreibung", "Bruchrechnen Beschreibung");
+        int images[] = {};
+        // TODO: 11.06.2019 These values have to be saved in an xml-file, not directly in the document
+
+
+
+
+
+        // Android Studio code
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
@@ -34,7 +50,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        
+
+
+
+
+
 
     }
 }
