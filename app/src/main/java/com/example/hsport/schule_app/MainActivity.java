@@ -47,7 +47,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Toast.makeText(MainActivity.this, "Addieren Beschreibung", Toast.LENGTH_SHORT.show();
+                    Toast.makeText(MainActivity.this, "Addieren Beschreibung", Toast.LENGTH_SHORT).show();
+
+                }
+                if (position == 1) {
+                    Toast.makeText(MainActivity.this, "Subtrahieren Beschreibung", Toast.LENGTH_SHORT).show();
+
+                }
+                if (position == 2) {
+                    Toast.makeText(MainActivity.this, "Multiplizieren Beschreibung", Toast.LENGTH_SHORT).show();
+
+                }
+                if (position == 3) {
+                    Toast.makeText(MainActivity.this, "Dividieren Beschreibung", Toast.LENGTH_SHORT).show();
+
+                }
+                if (position == 4) {
+                    Toast.makeText(MainActivity.this, "Bruchrechnen Beschreibung", Toast.LENGTH_SHORT).show();
 
                 }
             }
