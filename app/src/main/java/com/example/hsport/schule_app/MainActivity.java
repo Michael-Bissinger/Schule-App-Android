@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     // Own code
     ListView listView;
-    String mTitle[] = {"Addieren", "Subtrahieren", "Multiplizieren", "Dividieren", "Bruchrechnen"};
+    String mTitle[] = {"Addieren", "Subtrahieren", "Multiplizieren", "Dividieren"};
     String mDescription[] = {"Addieren Beschreibung", "Subtrahieren Beschreibung", "Multiplizieren Beschreibung",
-            "Dividieren Beschreibung", "Bruchrechnen Beschreibung"};
-    int images[] = {R.drawable.plus, R.drawable.minus, R.drawable.geteilt, R.drawable.Bruchrechnen};
+            "Dividieren Beschreibung"};
+    int images[] = {R.drawable.plus, R.drawable.minus, R.drawable.geteilt, R.drawable.mal}; // add bruchrechnen
     // TODO: 11.06.2019 These values have to be saved in an xml-file, not directly in the document
 
     @Override
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
 
         MyAdapter adapter = new MyAdapter(this, mTitle, mDescription, images);
+        listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -60,10 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (position == 3) {
                     Toast.makeText(MainActivity.this, "Dividieren Beschreibung", Toast.LENGTH_SHORT).show();
-
-                }
-                if (position == 4) {
-                    Toast.makeText(MainActivity.this, "Bruchrechnen Beschreibung", Toast.LENGTH_SHORT).show();
 
                 }
             }
